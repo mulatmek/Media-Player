@@ -15,8 +15,8 @@ def load_dir_to_dictionary() -> dict:
     return dict(zip_iterator)
 
 
-def make_file_pretty_name(ugly_song_name) -> string:
-    return ugly_song_name.split("-")[0]
+def make_file_pretty_name(song_name) -> string:
+    return song_name.split("-")[0]
 
 
 def playMusic():
