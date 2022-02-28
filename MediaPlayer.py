@@ -1,16 +1,22 @@
 import string
 
 import pygame.mixer
-from pygame import mixer
-import pathlib
+import os
 
 
 def load_dir_to_dictionary() -> dict:
-    pass
+    user_path = input()
+    songs_name = os.listdir(user_path)
+    for i in range(0,len(songs_name)):
+        songs_name[i]=make_file_pretty_name(songs_name[i])
+    print(songs_name)
+    files_path = [os.path.abspath(x) for x in os.listdir(user_path)]
+    zip_iterator = zip(songs_name, files_path)
+    return dict(zip_iterator)
 
 
 def make_file_pretty_name(ugly_song_name) -> string:
-    pass
+    return ugly_song_name.split("-")[0]
 
 
 def playMusic():
