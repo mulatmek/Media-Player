@@ -6,15 +6,14 @@ import os
 # p = "C:\Users\Mulat\Desktop\MediaPlayerProject\songs"
 
 
-def load_song_dir_to_dictionary() -> dict:
-    user_path = input()
-    songs_name = os.listdir(user_path)
+def load_song_dir_to_dictionary(user_path) -> dict:
+    song_names = os.listdir(user_path)
     files_path = [os.path.abspath(user_path) for x in os.listdir(user_path)]
     for i in range(0, len(files_path)):
-        files_path[i] = files_path[i] + os.sep + songs_name[i]
-    for i in range(0, len(songs_name)):
-        songs_name[i] = make_file_pretty_name(songs_name[i])
-    return dict(zip(songs_name, files_path))
+        files_path[i] = files_path[i] + os.sep + song_names[i]
+    for i in range(0, len(song_names)):
+        song_names[i] = make_file_pretty_name(song_names[i])
+    return dict(zip(song_names, files_path))
 
 
 def make_file_pretty_name(song_name):
@@ -23,7 +22,6 @@ def make_file_pretty_name(song_name):
 
 
 def play(file_name):
-    mixer.init()
     mixer.music.load(file_name)
     mixer.music.play()
     while True:
