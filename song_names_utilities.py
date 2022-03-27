@@ -1,5 +1,4 @@
 import re
-from pygame import mixer
 import os
 
 
@@ -25,7 +24,3 @@ def make_file_pretty_name(song_name):
 # test
 #assert make_file_pretty_name("Drake - Fake Love (128  kbps) (mp3conv.ru).mp3") == "Drake "
 
-
-def play(file_name):
-    mixer.music.load(file_name)
-    mixer.music.play()
