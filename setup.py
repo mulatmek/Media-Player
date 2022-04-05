@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='MediaCli',
+    name='media_cli',
     version='0.0.0',
     packages=find_packages(),
     install_requires=[
@@ -9,6 +9,6 @@ setup(
     ],
     entry_points='''
     [console_scripts]
-    media=MediaCli:MediaCli
+    media=media_cli:media_cli
     '''
 )

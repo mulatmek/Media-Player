@@ -1,7 +1,0 @@
-setup.py
-MediaCli.egg-info/PKG-INFO
-MediaCli.egg-info/SOURCES.txt
-MediaCli.egg-info/dependency_links.txt
-MediaCli.egg-info/entry_points.txt
-MediaCli.egg-info/requires.txt
-MediaCli.egg-info/top_level.txt
