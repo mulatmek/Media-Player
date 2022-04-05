@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    media=media_cli:media_cli
+    
